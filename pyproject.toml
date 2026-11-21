@@ -1,0 +1,28 @@
+[project]
+name = "simple_rag"
+requires-python = ">=3.11"
+version = "0.1.0"
+dependencies = [
+  "openai>=1.0,<2",
+  "fastembed>=0.5,<1",
+  "numpy>=2.4.2,<3",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.34,<1",
+  "python-multipart>=0.0.20,<1",
+  "pymupdf>=1.26.1,<2",
+  "slowapi>=0.1.9,<1",
+]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[dependency-groups]
+dev = ["ruff>=0.9,<1"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]  # pycodestyle, pyflakes, isort
